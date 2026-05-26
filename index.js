@@ -93,7 +93,7 @@ app.use(bodyParser.json())
 // -----
 
 app.set('view engine', 'pug')
-app.set('views', './views')
+app.set('views', path.join(__dirname, 'views'))
 
 // -----
 
@@ -103,11 +103,11 @@ app.use(cors())
 // -----
 
 var favicon = require('serve-favicon')
-app.use(favicon('./www/favicon.ico'))
+app.use(favicon(path.join(__dirname, 'www', 'favicon.ico')))
 
 // -----
 
-app.use(express.static('www'))
+app.use(express.static(path.join(__dirname, 'www')))
 
 // Ensure the local upload directories exist (used by the local-FS replacement
 // for the old S3 / Buffer flows).  These are also served as static files.
@@ -157,12 +157,23 @@ function listen() {
 	})
 }
 
-startMongo()
-	.then(listen)
-	.catch(function(err) {
-		console.error(
-			'MongoDB connection failed – starting server in degraded mode.',
-			err.message || err
-		)
-		listen()
+// In serverless environments (e.g. Vercel) the module is imported directly;
+// only start listening when run as a plain Node process.
+if (require.main === module) {
+	startMongo()
+		.then(listen)
+		.catch(function(err) {
+			console.error(
+				'MongoDB connection failed – starting server in degraded mode.',
+				err.message || err
+			)
+			listen()
+		})
+} else {
+	// Serverless: connect to Mongo in the background, export app immediately.
+	startMongo().catch(function(err) {
+		console.error('MongoDB connection failed (serverless):', err.message || err)
 	})
+}
+
+module.exports = app
