@@ -1,0 +1,15 @@
+#particle-footer h1 {
+    position: relative;
+    z-index: 1;
+}
+
+#particle-footer {
+    position: relative;
+}
+
+.bordered-sassy {
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}

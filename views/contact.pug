@@ -1,0 +1,60 @@
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        include ./head.pug
+        title Contact | SpArc
+
+        link(rel='stylesheet', href='/css/contact.css')
+
+    body
+        // Header
+        // Content
+
+        include ./menu.pug
+        .parallax-container.center.valign-wrapper
+            .container(style='margin-top:0px')
+                h2.white-text.strong Get In Touch
+            .parallax
+                img(src='/images/trial22.jpg')
+
+        .container
+            .row
+
+
+                if status
+                    h4.center.col.s12 We'll get in touch with you soon!
+                else
+                    h4.center.col.s12 Tell us about you
+                    form#contact-form.col.s10.push-s1.m8.push-m2(action='/enquiry/contact', method='post')
+                        .row
+                            .col.s12.input-field
+                                i.material-icons.prefix account_circle
+                                input#name.validate(name='name', type='text')
+                                label(for="name") Name
+
+                            .col.s12.m6.input-field
+                                i.material-icons.prefix email
+                                input#email.validate(name='email', type='email')
+                                label(for="email") Email
+                                span.helper-text(data-error="Invalid", data-success="Valid")
+
+                            .col.s12.m6.input-field
+                                i.material-icons.prefix call
+                                input#phone.validate(name='phone', type='tel')
+                                label(for="phone") phone
+
+                            .col.s12.input-field
+                                i.material-icons.prefix chat
+                                input#comments.validate(name='comment', type='text')
+                                label(for="comments") Comments
+
+                        .row
+                            .col.s12.center
+                                a.blue.lighten-2.waves-effect.waves-light.btn.btn-large(href='javascript:$("#contact-form").submit()') Submit
+
+
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.9710859505967!2d79.04725481471043!3d21.11371889024891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf8930ef9dbb%3A0xb6983559d82481c4!2sSpArc+Associates+(Architects%2C+Planners%2C+Interior+Designers)!5e0!3m2!1sen!2sin!4v1527303524619', width='100%', height='400px' ,frameborder='none')
+
+        include ./footer.pug
+
+

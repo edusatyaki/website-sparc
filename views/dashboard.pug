@@ -1,0 +1,51 @@
+doctype html
+html
+    head
+        title  Dashboard | SpArc
+        include ./head.pug
+    body
+        
+        include ./menu.pug
+        
+
+        main
+            .container
+                h2.center Dashboard
+
+                .row
+                    .col.s9
+                        .collection
+                            each enquiry in enquiries
+                                div.collection-item
+                                    a(href='javascript:viewenquiry("'+enquiry._id+'")') #{enquiry.comment}
+                                    if enquiry.status
+                                        span.new.badge
+                                    a.right(href='javascript:deleteenquiry("'+enquiry._id+'")')
+                                        i.material-icons close
+                            
+                            else
+                                p.center
+                                    a(href='/dashboard/enquiries') No new enquiries. Click here to go to archives.
+                        
+                    .col.s3
+                        include ./adminmenu.pug
+                        
+            
+        
+
+            #enquiry-modal.modal
+                .modal-content
+                    .row
+                        h4.col.s8.light#enquiry-name
+                        .col.s4.grey-text#enquiry-date
+                    .row
+                        a.col.s6.truncate#enquiry-email
+                        a.col.s6#enquiry-phone
+                    .row
+                        blockquote.col.s12.light#enquiry-comment         
+
+    
+        include ./footer.pug
+        
+        script(src='/js/dashboard.js')
+        

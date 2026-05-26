@@ -1,0 +1,463 @@
+1doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        title Gallery
+        // Lato Font
+        link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700', rel='stylesheet', type='text/css')
+        // Stylesheet
+        link(href='/css/gallery-dark-materialize.min.css', rel='stylesheet')
+        // Material Icons
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    body
+        // Navbar and Header
+        nav.nav-extended.nav-full-header(style='background-color: black')
+            .nav-background
+                img.active(src='/images/trial.jpg', alt='control room')
+            .nav-header.valign-wrapper
+                .center
+                    h1
+                        br
+                        | Marketplace by
+                        br
+                        | SpArc
+            // Fixed Masonry Filters
+            .categories-wrapper
+                .categories-container
+                    ul.categories.container
+                        li.active
+                            a(href='#all') All
+                        li
+                            a(href='#chair') Chairs
+                        li
+                            a(href='#wallart') Wall Art
+                        li
+                            a(href='#wallpeice') Wall Peices
+        ul#nav-mobile.side-nav
+            li
+                a(href='index.html')
+                    i.material-icons camera
+                    | Gallery
+            li.active
+                a(href='index-dark.html')
+                    i.material-icons brightness_3
+                    | Dark Theme
+            li
+                a(href='blog.html')
+                    i.material-icons edit
+                    | Blog
+            li
+                a(href='docs.html')
+                    i.material-icons school
+                    | Docs
+            li
+                a(href='full-header.html')
+                    i.material-icons fullscreen
+                    | Fullscreen Header
+            li
+                a(href='horizontal.html')
+                    i.material-icons swap_horiz
+                    | Horizontal Style
+            li
+                a(href='no-image.html')
+                    i.material-icons texture
+                    | No Image Expand
+        // Gallery
+        #portfolio.section.gray
+            .gallery.row
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.chair
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img1.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Aquamarine
+                                span.price $29.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.chair
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img(src='/images/img2.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Sun
+                                span.price $9.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.wallart
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img3.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Big Bang 1
+                                span.price $23.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.chair
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img(src='/images/img4.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Maze
+                                span.price $11.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.chair
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img(src='/images/img5.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Ice
+                                span.price $14.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.chair
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img(src='/images/img6.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Cave
+                                span.price $4.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.chair
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img(src='/images/img7.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Grapefruit
+                                span.price $14.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.wallart
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img8.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Big Bang 2
+                                span.price $40.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.wallart
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img9.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Big Bang 3
+                                span.price $18.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.wallpeice
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img10.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Circle
+                                span.price $10.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.wallpeice
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img11.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Triangle
+                                span.price $10.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+                .col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.wallpeice
+                    .gallery-curve-wrapper
+                        a.gallery-cover.gray
+                            img.responsive-img(src='/images/img12.jpg', alt='placeholder')
+                        .gallery-body
+                            .title-wrapper
+                                h3 Hexagon
+                                span.price $10.99
+                            p.description
+                                | Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth. Typewriter scenester hammock truffaut meditation, squid before they sold out polaroid portland tousled taxidermy vice. Listicle butcher thundercats, taxidermy pitchfork next level roof party crucifix narwhal kinfolk you probably haven't heard of them portland small batch.
+                            p.description
+                                | Dimensions:XX mm* YY mm
+                                br
+                                |  Material:XXXXXXXXXXXXX
+                                br
+                                |  Installation: Free
+                                br
+                                .carousel-wrapper
+                                    .carousel
+                                        a.carousel-item(href='#one!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#two!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#three!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#four!')
+                                            img(src='http://placehold.it/300x200')
+                                        a.carousel-item(href='#five!')
+                                            img(src='http://placehold.it/300x200')
+                        .gallery-action
+                            a.btn-floating.btn-large.waves-effect.waves-light
+                                i.material-icons favorite
+        // /.container
+        // Core Javascript
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+        script(src='/js/imagesloaded.pkgd.min.js')
+        script(src='/js/masonry.pkgd.min.js')
+        script(src='https://cdn.jsdelivr.net/materialize/0.98.0/js/materialize.min.js')
+        script(src='/js/color-thief.min.js')
+        script(src='/js/galleryExpand.js')
+        script(src='/js/init.js')

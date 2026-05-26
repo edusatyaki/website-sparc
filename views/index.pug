@@ -1,0 +1,154 @@
+doctype html
+html
+    head
+
+        title Welcome | SpArc
+        include ./head.pug
+
+        link(type="text/css", rel="stylesheet", href="/css/home.css")
+
+
+
+    body
+
+        include ./menu.pug
+
+        .parallax-container.screen-height.valign-wrapper
+            .container
+                .row
+                    img#intro-head.col.s10.push-s1.m8.push-m2.l6.push-l3(src='/images/logos/white-transparent1.png')
+            .parallax
+                img(src='/images/art-background-decoration-354939.jpg', alt='Unsplashed background img 1')
+
+        .full-width
+            .container
+                .section
+                    // Icon Section
+
+                    h1.center(style='font-size:29px;') Our Working Fields
+
+                    .row
+                        .col.s12.m3
+                            .icon-block
+                                h2.center.brown-text
+                                    //- img(src='https://png.icons8.com/ios/50/000000/home.png')
+                                    img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACGElEQVRoge3YvWsTcRzH8VfboKIiSBVEVJAOjiJKRRBRFwU3lw5uUvon2KGji/9CBxcRdNHJRdGCVHwapIuTICriEyKIgthK43C/mFyappfkLnep94aDkHwfPp/7/e6bu6MkEfswh/vh80ByEp9QDcdXnMlTUKcMYQZ/RAbuhKMavpsJMYVmG26JRC/jCoZFwqfFzW3PSeOaHMQr9W10tkXMKXwOMW9xpG/qEnIBP0UCX2B/m9i9eBpif+Fiw2/VVY7MqYi2T63hNWxOkLcRsw15s9ggJyN78Fj9zE52UWMy5FbxxErhmRs5gY+hyTsc7aHWIbzWegUyMzKES1gKDe5iNIW6o6FWTfh06JWJkebRehkjKdYfCTWXQ4/bMjByAC9D0e84n2bxJs7hmwwu9gn8CAUXMJZW4TaMhV41IxO9FGserdexpUeBnbAJVxv610Z0R+zEg1BgSXTx5cUUfgct89idNPE4PoTE9ziWhboOOYw3Ik1fcHqthCkshoSH2JWhuE7ZgXviu2TFXfRW3BSfFJX+aUxMRVzjDZH2fzxXH619u1Hrkpq+mtZnRM8KRNtpAeO5SOuOcZHmxdUCBmVFYgy3CBxISiNFY90YSfO/otsBkcqroXJF2pD0DKc64tfNipRGikZppGiURopGaaRolEaKRmmkaJRGisa6MdLqIajI77QaiWlvtSKP+iSkF+bzFlDy3/AXWYWcPY0MkmcAAAAASUVORK5CYII=')
+                                h5.center.strong Architecture
+                                p.light.center Architecture starts when you carefully put two bricks together. There is begins.
+                        .col.s12.m3
+                            .icon-block
+                                h2.center.brown-text
+                                    //- img(src='https://png.icons8.com/ios/50/000000/armchair.png')
+                                    img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAEIUlEQVRoge2YTWgVVxTHfzGJNjyrhKBVF1WRGrVCBKvFai2CC2tRi5uqKNbWjyxEUSkI7ULc2lWlWtHaoG7a0lKrwUUptJiUUlEUteJXFfEzaorGqjEk08X5JxOfM5k7k+tz8/4wzJu55/7/Z+7Huec8KKKIIooooogiikjCJGArcBp4ALTo91bgjRfolzOqgO+BDiCIuTqA72T7wpED1gKNwB2gGTgEXMacvQl8CtTINgdM0LtbsrmsPs3iaATWyLYgmAbcIH7EvwVe7qH/AGxG4vpfB6Y+J9+7MA9oleBh4D1siQwA5mAjXuLAUyLbOepbJa4GcbcCcz373oXxwH0JbQH6PAeNUuBzadwHXvctUAL8JYF9vskjsFtax/A8YItEfI3CbMactAJggU/iP0S60idpAmql2eCLsJpwzRYsNAL9pdkBvJZk7LL+Zup+EPgvu1+p8QCox/bnzARbpw/pjOm/ZfcpM37P8yEWLh8yWvcTmd3JjuO6V/sg6zzFh/ggS4mhhKd9ZowDdhEmgEeBT4C+vfXOAf2Ajdg5EgDt8mVsWqK5wEOic6FjQKUffyNRhS2pKO2HWFrjhJHAY3XciY1CDoscJ/X+Z4+O5+OgNE5Js0I+7NT7R8AIF6Jv1GF3RNsg4Lba3+ytxxGYIe670orz7WsXsqsyrolp36z2/andTEa9uD+LaZ+g9iv5DVEp9x1snQ7GRj8fQ7CiqBwLCGf1vgaYDkwERmHTn8NO6HLgX+CJnLiE7bXDwJ9YQKkGzmBL51VsVvIxCGiSj1Ez9hQasa9+vwebXbKpw6q6C8QXSknXdaw2qdPzth505xPWQon4SMYXgeExNuN4ti6/hu2rVcA72IxUAmXqU4mdC1OAZcBefUR3jnbCAzgfI4B/ZPehy4eUYbV0gP37sR0rePLRGV0asOoua90wA/hVXD9FtJfKhxbZ1BMOTiIqgC+ANnWeHWEzFViBW2nrgiVER8LZ8qFNPr2UhXydSH7M6p0H/CAf1vWGpAo7HNuw9V1ovIJFulYSolTSur4LHMDW5BIvrqXDUix07yf6KEiFd7GpvYC//eCKv6U9ywdZH+wQC7CwWii8Lc2rREfNp+ASMjuAPfq9PLtfqfGx7nXY+eIFI7FN95j4A8snxkjribS94itsqpuwUDgGhyl3RBlWTFUD6wkz7J7SlcwYhk1x1pwq7dUuTSekSStqZX8E+8e9OUVfVzSL+4i0an0LDMTS8ABL1Uux9N3XX5oLCUN8GfCWnu/huazeJOJf9LxMz2fws09KxRWIG2kF0vaG84SzUY6l+AGw2KPGYsLyoVxaAXDOowZNIp0EbOgm4CtqIa5z4t4ATNbvmx41ukJv9+sDnwLCggidL30KVAA7sOLmCrDaJ3ke1kijBRvACpdO/wMs4VLEQ+OOawAAAABJRU5ErkJggg==')
+                                h5.center.strong Interior
+                                p.light.center Interior is the natural projection of the soul
+                        .col.s12.m3
+                            .icon-block
+                                h2.center.brown-text
+                                    //- img(src='https://png.icons8.com/ios/50/000000/grass.png')
+                                    img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAGVElEQVRoge2ZeYjVVRTHP+OMu0xTKuJWmKlNG4aZlk3SomSRaGBFBA1aBgkFZZsYGolkO1omEflPm+2ElVYkVlaalWVmTrZpmlaWjpOjs/jrj3NO977fu+/N7/3m1SPoC4/7u+eu37ucc+558D/+G+gCfAn8DNwL9CztdNLjKOAgEOlvDzCtpDNqByaQSSYCXgYqSzmptJgEtJBJ5ivguFJOKi1uIJNIhNydk0s5qbR4GCFQD2zB3ZtTSzmpNOgIrEMIvASsxu3MsSWcVyoMARoQAhcDK/X7G6BXCeeVCrcik/8asS2faH4l0KGI45QBZwGLgM+BA8BGoKJYA3RCtFYEXA/0BXZqfm4R+i8DrgLqyFYwP1FEIgCTcfejGzAWaAZagZp29DsSWEs2gQh4CujTjr6DKEO2OwJmqmyO5rcAXVP0eS3QpH3YPYyARqC2fdPNjym47e6ovw0qW1BAP+XAQm3Xivh1r+B2fETxphxGB2CTDnipykYgR6wJGJqgjzLgcdwuXAQ8giNxfHGnnBvTdND3PdkSlb2YoP0dOCN7BnA1jtQ/vhM+ugP7dPBqlfXRiUXAmDxtxyNH6RAwDhgM7Cdzh/9V2A7c6clspd/O0aYKuVsRcCNyT9Zofkl7J1QFbAZ+Qc5p34TtxuK0ld+X7VTIF1usZSuQe3Kd5n9EdjkpjgTuA3YhBhqA/jj1Z+d2JqKN8qEDsEPb+Od6gcqejNU/AVEIjchxqgR2a93JCQmY0bR2pvH+Ri1w2CuMEAN1TBsdL9K6czxZP+T8NwEDPPnzWnee5mdpfnVCEt29PvzfrHjF28hkGQG/ARfk6fxCrbcmJn8uNsgQ7bMeeUp3RY5FBJybgMQgnCE+4M1vGbJLWXhAK/wOrPdI3ZJjgG7IUWlG7odhgrbdrHnbuXs0X0t4AUI4DfhV69cBq/T7Y/J4Eh2AN7xB5uHY57Lab2r5JZ6sHNiu8hpkZw8jdwPE/kTAlW2QGA3sxSmI6bh73OZbqBewTRvcDUz1yMwP1Ddfa2FMbpfevNlVKh+q+T/I75tVIy9RM7IDkQWJEAOaCGcix6UZUaM+mZtjdc9T+Qcx+RgyL6UNfrvmF+cZvw/wg9ZbjmjQJ7x8QbhfG36EXCgj0wpM9Or1QAgfIPPNUI7Ypgg5Vv1Ubs/mcTnGrQDe0TrrEG01XMdtJMXzugfOCk9R2WzcGR3m1TUncnisj6Uq/1TzvZVUPdA5x7jztc1uxMaBxAp8ZVEwrsFZ73JkZ5bhtIYZzacJn93LyTwO9gR4Icd4pyOxtFacWj4JId+ALEQqVCABBt/6VgLfq+wulZkNil/4gTh7VIZzUWYExuqExJwj4EFP/qjKHkpLwjBDO3rXk9XgPNhhOMP4eqC9acBhuIDFyEA9CwZuRewTyKLVIzuS5J2TF90RA+m77ACP4aIoplLrAu2f0bLpSDz5ILL6PqpwqnWSJ68lvzddMMxln+fJeuMITkDOdhPZ0Q5badNWawP9zyXsdy1XedH+DajRDr+Lye1urNKyiGz1eD6Z9mRprLwrTk2P9eRHILvXTBGDgGU4VXyiJ69ELHTkpeNjbfuTSWR2rNw04/qYfCKZHkFOFBIdjIC39Ns3ZPU4C21OY/xhtlPrGeK7OlXTuFY6R9M2iRSKKxBCr8Xkg8l8y9wUaOsH30Z78kHadj/ZL8TPtP7ZbU2s0HitXcRRMfm3ZLrjIaO11fve5n1fhhzbV4E/PXlnxBC2IEoiLwolsgO5lD2Bo2Nlz3rfISK7vO+93rfdp3gIqRrRfnXIhc+LNBH0DZrGAwu+ns9HpAlxLkFsySiyjS3AKZpuTDKpNES+0LQ6Jt+CaDUIq0ojss+TjUQs+CbEGPoYoulmEiANETvfAwNl72ka+ufXiPjHyjzlDwP1zevdnmRSaYhYxwMCZbZ6cfcDHJFGT2arHnJrjMjOJJNqD5HQjligLPTOaAiUmRMYImKPsB1JJpWGyB5NqwJlpmJDRA5p6r/RLWYWN5Ag7gmIt9Am0hCxoxEKGtigoaNlKtRvZ3dpH9mweo2Bsiy0h0i3QNl+TfPtSBdPZpa8gWwYkTZtSFpUIHq/OVDWSctaAmXlgXYWbw7FmJu1LNEfoGn+JW3BvRHiaEKCdaEQZmugnf1XH1qUFeRelCz8BSYGBULqarLhAAAAAElFTkSuQmCC')
+                                h5.center.strong Landscaping
+                                p.light.center In all things of nature there is something of the Marvelous
+                        .col.s12.m3
+                            .icon-block
+                                h2.center.brown-text
+                                    //- img(src='https://png.icons8.com/ios/50/000000/streets.png')
+                                    img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAA9ElEQVRoge2YSw7DIAxEJ1Wv0fM0979Bw0HoIl1ZoNLY5uPOk1hAJBwD9hgAQpYgf9qVMRU3y8lGEsaRu+hbbHcymENNVrYDwP6DHTPkjmyWk/ekR4yYr34J6Yj2aCW0HS13tI5kAK/KnN/GpmKYIMpg96BLAgkjiGGz1rLQkdnwKBoP0S9lrQTgYWCvmhEtxPDZ8AM7Toe19gjxRgaLPHfbxfFWzOyFSb+EdKLXK8qOU93dBNHiqitLlBIWqu6q7MOuumHSLx2ZDb6izMaoV5Qkvi2bfqe/IXbRjBJhYsSa1tV3r7W0tBpgrVUjTIzQEUL+hDd6ChzJL1iECAAAAABJRU5ErkJggg==')
+                                h5.center.strong Urban Design
+                                p.light.center In all things of nature there is something of the Marvelous
+                    .row
+                        .col.s12.center
+                            a.blue.lighten-2.waves-effect.waves-light.btn-large(href='/projects') Explore
+
+
+
+        .parallax-container.valign-wrapper
+            .parallax
+                img.darken(src='/images/green.jpg', alt='Unsplashed background img 2')
+
+            .container
+                .row#counter
+                    .col.s4.center
+                        .white-text
+                            .counter-value(data-count='38', style='font-size: 4em') 0
+                            h5 Projects
+
+                    .col.s4.center
+                        .white-text
+                            .counter-value(data-count='27', style='font-size: 4em') 50
+                            h5 Clients
+
+                    .col.s4.center
+                        .white-text
+                            .counter-value(data-count='169', style='font-size: 4em') 100
+                            h5 Designs
+
+
+
+
+
+
+
+        .container
+            .section
+                .row
+                    .col.s12
+                        h4.center Borderline
+                        p.left-align.light.center(style='font-size:20px;line-height: 35px;')
+                            | SpArc Associates is a Nagpur-based collaborative firm for architectural, Urban Planning,landscape and interior designing by a group of young creatively enthusiastic architects. The firm works on a wide array of projects ranging from building architecture
+                            | to landscape and interior designs.
+
+
+        .parallax-container.valign-wrapper(style='height: 600px;')
+            .parallax
+                img(src='/images/partment.jpg', alt='Unsplashed background img 3')
+
+
+
+        .container
+            .section
+                .row
+                    .col.s12
+                        h4.center Products
+                        p.left-align.light.center(style='font-size:20px;line-height: 35px;')
+                            | SpArc Associates do deal in Interior products
+                        .row
+                            .col.s12.m4
+                                .icon-block
+                                    h2.center.brown-text
+                                        //- img(src='https://png.icons8.com/ios/50/000000/paint.png')
+                                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADxUlEQVRoge3aXYhVVRjG8d9MVjplOg2lYhjZh1FEQURFBU0ZRHTRF5hEZHVTRF90oZlIdNEX1EVEBUZEkGBKVExZF4VNBmWFdVERGAVSRlpGk8rM6EwX7zrsoenM2fucs04E84fNPhye9a5ncdZea73vPkwzzTT/J3rxJdY10B2BQWzM7qhJ1mMcAw10dyXdV9kdNcFyYe4vnDKF7ijsStrrO+CrEgvxmzB3WwPt6qT7DF2ZfVWiC+8Ic2820M5VDHhpZl+VuUcY2435DbRPJO2WzJ4qczr2C3M3NNAuwL6kvSCzr0rMwKfC2Esl9C8k7aacpprhEWHsBxzTQHsShnEQZ2T2VYlzMYJDuLSEvra/vJjRU2V68J0w9mQJ/VliwAewKKOvyjwnBvE1ZpbQv530T+U0VZUrMCbm+9kl9BeLQQzh+Iy+KtGLncLYypJttiT92kyemmKDMLUVh5XQX63YKButah3jZuUOhDW6sT21uTejr0osxO/C1O0l29yU9D/iyDy2qtGN94Wpt0q2ORw7UptbMvmqzEXC0B7MK9nmTsXyXOZZykY3zsEKkYqOY1vJtj34KbW5Noe5MhyHh8W8Hv/HdRCnloixKuk/8R8lTSvE9KkZ3yFOtCvxhiKjmzVFjLmKRaE/o9e6PK4YwIDJucIcxdlqEMfWifNo0ryXx+bUPJg6HxF7RT1OU0y5naJoMHHqLBB7zJg4GXeU8zGaOr+uhH4+PlT8et9gDS7Hy+m713IYnYoufJ46f7piu1vxq8kLwiiWtNdmY65Jnf8slsyq9Iiyz6Di6LK6be4q8EEycF+LcWpHkVdbNdTdRJuTRXo6glda7H9Ouv/RYpymBrJMzPXNYt1vhb50bzVOUwOpHR3Wt9o5Fqf7922IVYlFYrn909S7dFm2imfkwjbEqsTdqeMNbYg1U1QZRzC7DfEqUVutlrchVn+K9VEbYlWiT2xaw4rVphXWiYF0fP+4I3W8uQ2xekWJZ1Skwh1lmxjIjW2I9Yz2PWuVuERRmmm1GNAvfokDiuW3Y9QKCGtajHOmIgFb1aqpqtRqUnu0VihbqsgAN+pwKrsEe5V7o1SPPjwrNtJaztHRWtViRa22mfcS54mHekiRRa7V3LGoaZYp3p5uEv80mIpZoob1QNLXSjq1611RIsrGxHnajatwPy5L323HQzhaHCNmp8/zcCJOSNe/lfz34nU8jy8yeK/LgMnpZ5VrHz7GY7hSh5+DGRM+H0r3YXGYIwprQ+nzfrGP7BIr2G78kq5vxUvNscx+6/I3rCwHLNoE6VoAAAAASUVORK5CYII=')
+                                    h5.center.strong Art Pieces
+                                    p.light.center Architecture starts when you carefully put two bricks together. There is begins.
+                            .col.s12.m4
+                                .icon-block
+                                    h2.center.brown-text
+                                        //- img(src='https://png.icons8.com/ios/50/000000/lamp.png')
+                                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAC3ElEQVRogd2Zz2sUMRTHP10qXXsoUlw8F/x18tdRoVYFLXi1WpDiXdFzr/0PxKveFAQpgnrQIq4KglpPigh6aHU9lZVqL7pV6HrICztuZ2cz2ZfM4gdChuT15ZvOS+YlC+4MAEtAM1JZkjHVORpxEraMh5jIDXE+F8J5G3My1nVtx2Xguzjfo+08hZ3ABrAGbNV0fBYziZeaTrvwSsac0nT6QJxe1HTahUsy5n0thxXgt5TtWk4dGAXWgT/Ajm7GJQeH08AW4CHwrSdp+VgFHgGDKIXXIuYVn9FwlpMpGft1r452iaMfKO8ejiR3y71Zht1C64LUd4BfvevKTQOYl+fzvk6SKUmQL6wj46LhM25rehM2JfF2oITTPzRL4IzUtzBf2aJoArfleSbLMA3nRRaJ3RgtuVMWm5IsBhDlyxsyUpZOoZUMq37hptTO4WVTEqfUICKZutLeiE1JFoCVoNLyUQcekyNlsSnJuYCifJnGMWWxKckaMBxYlA9lTLq0aTdtDy2bkswDP8Pryk0DuCvPHVOWAWCZ+BcMvmWZDrcsE30gLm+ZSJtIr1SAmgzwFjjFv6FbkrZ3YlMj7onTmWsYgU8wi7ITZaAqtlcj6MrNV4y4fQ62+8X2S1BFnqxjxA052A6JbUNrcM1zhr2Y2OZgOyp1XWtwzYnUpHZJ+61NLdMqB5oTqUp92sHW2lQzrQriICbuV4GRDLsRWoe2AxF0efEcI3A2w2ZWbJ5GUeTJCYzIFdKPpMPS1wSOR9TlhX0rl1P6rkjfs5iCfJnEiH2f0vdB+k5GVeRJCfPFbmI2AMshAt6Thbh426D1m8axRLtdE/cIcE8W6gbxhdSHE21H2vpUCTWRT1KPJdrs88dAYwahQmsbttSlrS/PIJO00vdeSk18FYY9EWoUtQTSByuicD95FntaGLUL8S1pfoKFm2YYFRpuWmEUZLwif1JTZdDjb2K+FWf+mzfyF9wthPH5GMBtAAAAAElFTkSuQmCC ')
+                                    h5.center.strong Lightings
+                                    p.light.center Interior is the natural projection of the soul
+                            .col.s12.m4
+                                .icon-block
+                                    h2.center.brown-text
+                                        //- img(src='https://png.icons8.com/ios/60/000000/chair.png')
+                                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAB80lEQVRoge2Yu05CQRCGP4mK8RJBBI0WqIWVhaUvZOnTWPoqaqOJrYWVhZdC4w0BLxEkgsXOJisxyO6eIxuyf7IZGHbnzL8zs5wdiAgLI47rSsCajFVgAVgUWQSywCyQAXKypga0gTrQBB6BO+BexgVwKfLB0S8rHACdlMe+rVMuEemIPEXt4JXIG+AJqABV4AP4Al5kvo7QJCpKBWAeWEZFdUXkpodvVtC7FpT9TAqODASjHmu3UOlQFrmESpcCkAfGZUzJ/HfgU0YVlYIV4BaVntcineBTI2nDyjeXiJwAG8C0PGwXtZsPwB7q6F1HFf4r0JJ1Y8AMqsDPUUfwNuooLwM7qE16A84c/HLGszy4aOiqossbuu7inZPvz4auJLqKqzM+xV4TOWvomiKzPdbp35qGTtuo4QgfIvUuJ8CfSB1HRCLE1AovIvqhOUPnSkTbCCa1GiL7IdIwdDG1NCIRhohIPH675po2YmqldfxO9FiXSmrZ4pD0Oyh6HNk4ZntD/K/boUbf/rne2dNu1cQuii3+O8X+hG1EjlPx4ndYFbsrzIaCb+cxEVtDUyNDQ8SnZQo/X0UGegD4RqSdiBcJwDciLeOz659kIpEcmhqJREJDJBIaIpHQEImEBl8iSb5fedlyJdJ9wfK5BCVpKyIYfAMSk8CdQ4NaRgAAAABJRU5ErkJggg==')
+                                    h5.center.strong Furnishings
+                                    p.light.center In all things of nature there is something of the Marvelous
+
+
+        .parallax-container.valign-wrapper(style='height: 400px;')
+            .parallax
+                img(src='/images/build.jpg')
+            img(src='/images/white-transparent1.png', style='max-width:80vw;')
+
+        include ./footer.pug
+
+        script(src="/js/tilt.jquery.min.js")
+
+        script(src='/js/home.js')
+
+
+
+        script(src='js/counter.js')
+
+

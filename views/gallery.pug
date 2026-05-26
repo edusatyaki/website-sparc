@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+    head
+
+        title Projects
+
+
+
+        include ./head.pug
+        link(href='/css/gallery-materialize.css', rel='stylesheet')
+        link(href='/css/gallery.css', rel='stylesheet')
+
+
+    body
+        include ./menu.pug
+
+        main
+            .parallax-container.valign-wrapper#particle-footer(style='height:80vh')
+                .parallax
+                    img.active(src='/images/gallery.jpg', alt='control room', style='filter: brightness(50%)')
+                    h1.center.white-text(style='font-size:6em; font-weight:bold;margin-top:30vh;letter-spacing:15px;') Form. Space. Architecture.
+
+
+            #portfolio.section.gray
+                .gallery.row
+
+                    each project in projects
+                        - var coverImage = (project.images && project.images.length) ? project.images[0] : '/images/blank.png'
+                        .col.l4.m6.s12.gallery-item.gallery-expand(style="position: absolute; left: 0px; top: 0px;")
+                            .placeholder
+                                .gallery-curve-wrapper
+                                    a.gallery-cover.gray
+                                        img.responsive-img(src=coverImage, alt='project')
+                                    .gallery-header
+                                        span #{project.name}
+                                    .gallery-body
+                                        .title-wrapper
+                                            h3 #{project.name}
+
+                                        h4 Owner: #{project.owner}
+
+                                        p.description Project cost: #{project.cost}
+                                        p.description Finished: #{project.date}
+
+                                        p.description #{project.description}
+
+
+
+                                        .carousel-wrapper
+                                            .carousel
+                                                if project.images && project.images.length
+                                                    each image in project.images
+                                                        a.carousel-item(href=image, target="_blank")
+                                                            img.bordered-sassy(src=image)
+                                                else
+                                                    a.carousel-item(href='/images/blank.png')
+                                                        img.bordered-sassy(src='/images/blank.png')
+
+                                        if project.youtubeUrl
+                                            .section.center
+                                                iframe.full-width(height="400px" src=project.youtubeUrl+"&origin=http://www.sparcassociates.com/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+                                    .gallery-action
+                                        if project.projectUrl
+                                            a.btn-floating.btn-large.waves-effect.waves-light(href=project.projectUrl, target="_blank")
+                                                i.material-icons forward
+
+                    else
+                        p.col.s12.center There are no projects.
+
+
+
+        include ./footer.pug
+
+        script(src='/js/materialize-old.js')
+
+        script(src='/js/imagesloaded.pkgd.min.js')
+        script(src='/js/masonry.pkgd.min.js')
+        script(src='/js/color-thief.min.js')
+        script(src='/js/galleryExpand.js')
+
+        script(src='/js/init.js')
+
+        script(src="/js/particle.js")
+        script(src="/js/particleinit.js")

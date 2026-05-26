@@ -1,0 +1,61 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+        script(src="/js/vue.js")
+        
+    body
+        include ./menu.pug
+
+        main
+            .container
+
+                h3.center Team 
+            
+                ul.collection#peoplelist
+                    li.collection-item(v-for="person in people") {{person.name}}
+                        i.material-icons.right(@click="alert(person._id)") edit
+                        i.material-icons.right(@click="deleteperson(person._id)") delete
+
+            
+
+            .container
+                .row
+                    form(action="/person/create", method="POST")
+                        .col.s12.center(style="margin-bottom:60px")
+                            img.circle.responsive-img(src="/images/blank.png", alt="", width="200")
+                            .file-field.input-field
+                                .btn
+                                    span File
+                                    input(type='file')
+                                .file-path-wrapper
+                                    input.file-path.validate(type='text')
+                        .col.s12.m4.center
+                            h5.center
+                                |   Name
+                            .input-field
+                                input(type="text", id="name", class="validate", name="name")
+
+                        .col.s12.m4.center
+                            h5.center
+                                |   Position
+                            .input-field
+                                input(type="text", id="position", class="validate", name="position")
+
+                        .col.s12.m4.center
+                            h5.center
+                                |   Education
+                            .input-field
+                                input(type="text", id="education", class="validate", name="education")
+                            
+                        .col.s12.center
+                            h5.center
+                                |   Comments
+                            .input-field
+                                input(type="text", id="comments", class="validate", data-length="20", name="comments")
+
+                            button.btn.waves-effect.waves-light(type='submit', name='action', value="submit")
+                                | Submit
+        script(src="/js/edit-about.js")
+        

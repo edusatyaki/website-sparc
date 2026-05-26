@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        title About the team
+        include ./head.pug
+        link(rel='stylesheet', href='/css/about.css')
+    body.is-preload
+        include ./menu.pug
+        section.wrapper
+            .inner
+                header.special
+                    br
+                    br
+                    h2 The Developer Team
+                    p(style='font-size:20px;')
+                        | “Software Developer” – An organism that turns caffeine into software.
+                        br
+                        | Those are we
+                .row.col.s12
+                    .col.s3.m3
+                        h2.header(style='text-align:center;') Krushnn Dayshmookh
+                        .card.vertical(style='width:300px;')
+                            .card-image.circle(style='overflow:hidden;border-radius:0%;')
+                                img(src='/images/krushnn.JPG')
+                            .card-stacked
+                                .card-content
+                                    p Back-End Developer
+                                .card-action
+                                    a(href='https://krushndayshmookh.github.io') Learn More
+                    .col.s3.m3
+                        h2.header(style='text-align:center;') Sahil Kindarle
+                        .card.vertical(style='width:300px;')
+                            .card-image.circle(style='overflow:hidden;border-radius:0%;')
+                                img(src='/images/sahil.jpg')
+                            .card-stacked
+                                .card-content
+                                    p UI Developer
+                                .card-action
+                                    a(href='https://sahilkindarle.github.io') Learn More
+                    .col.s3.m3
+                        h2.header(style='text-align:center;') Tushar
+                            br
+                            | Joshi
+                        .card.vertical(style='width:300px;')
+                            .card-image.circle(style='overflow:hidden;border-radius:0%;')
+                                img(src='/images/tushar.jpeg')
+                            .card-stacked
+                                .card-content
+                                    p Graphics Designer
+                                .card-action
+                                    a(href='https://tushar2179.github.io') Learn More
+                    .col.s3.m3
+                        h2.header(style='text-align:center;') Piyush
+                            br
+                            | Joshi
+                        .card.vertical(style='width:300px;')
+                            .card-image.circle(style='overflow:hidden;border-radius:0%;')
+                                img(src='/images/piyush.jpg')
+                            .card-stacked
+                                .card-content
+                                    p I am a very simple card. I am good at containing small bits of information.
+                                .card-action
+                                    a(href='#') Learn More
+
+        include ./footer.pug

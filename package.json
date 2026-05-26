@@ -1,0 +1,44 @@
+{
+    "name": "website-sparc",
+    "version": "1.0.0",
+    "description": "A website for SpArc Architects.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "debug": "nodemon -r dotenv/config index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dayshmookh/website-sparc.git"
+    },
+    "keywords": [
+        "website",
+        "sparc"
+    ],
+    "author": "Dayshmookh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dayshmookh/website-sparc/issues"
+    },
+    "homepage": "https://github.com/dayshmookh/website-sparc#readme",
+    "dependencies": {
+        "@sendgrid/mail": "^7.0.1",
+        "aws-sdk": "^2.658.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mime": "^2.4.4",
+        "moment": "^2.24.0",
+        "mongodb-memory-server": "^11.1.0",
+        "mongoose": "^5.9.9",
+        "multer": "^1.4.2",
+        "pug": "^2.0.4",
+        "serve-favicon": "^2.5.0"
+    },
+    "devDependencies": {
+        "async": "^3.2.0",
+        "dotenv": "^8.6.0",
+        "nodemon": "^2.0.3"
+    }
+}

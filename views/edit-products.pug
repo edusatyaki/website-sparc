@@ -1,0 +1,102 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        main
+            .container
+
+                h3.center Products
+                .row
+                    .col.s12.m8.l9
+                        .collection.with-header
+                            each product in products
+                                a.collection-item.avatar(href='javascript:populate("'+product.id+'")')
+                                    img.circle(src='/product/image/'+product.id, alt=product.name)
+                                    //- img.circle.materialboxed(src=product.imageurl, alt=product.name)
+                                    span.title.strong.grey-text.text-darken-2 #{product.name}
+                                    p.black-text #{product.description}
+                                    p.blue-text.text-lighten-1 Rs #{product.cost}
+
+
+
+                            else
+                                p.center There are no products.
+
+                    .col.s12.m4.l3
+                        .collection
+                            a.waves-effect.waves-light.collection-item.modal-trigger(data-target='edit-modal', onclick='clearproduct()') Add product
+                                i.material-icons.left add
+
+                        //- a.waves-effect.waves-light.collection-item.modal-trigger(data-target='category-modal') Add category
+                                i.material-icons.left playlist_add
+
+
+                            a.waves-effect.waves-light.collection-item.modal-trigger(data-target='category-edit-modal') Manage categories
+                                i.material-icons.left playlist_add_check
+
+
+                        include ./adminmenu.pug
+
+
+            #edit-modal.modal
+                .modal-content
+                    h4#modal-heading.center Edit
+                    form#product-form.container(enctype='multipart/form-data', method='POST')
+                        .row
+                            .input-field.col.s6
+                                input#product-name(type='text', name='product_name')
+                                label(for='product-name') Product Name
+
+                            .input-field.col.s6
+                                input#product-cost(type='number', name='product_cost')
+                                label(for='product-cost') Cost
+
+                            .input-field.col.s12
+                                input#product-description(type='text', name='product_description')
+                                label(for='product-description') Description
+
+                            .file-field.input-field.col.s12
+                                .btn
+                                    span Upload Image
+                                    input#product-image(type='file', name='product_image')
+                                .file-path-wrapper
+                                    input.file-path.validate(type='text')
+
+                .modal-footer
+                    .container
+                        a#delete-btn.btn-flat.waves-effect.waves-red.red-text delete
+                        a.btn.waves-effect.waves-green.teal(onclick='$("#product-form").submit();') Save product
+                            i.material-icons.left save
+
+
+                //- #category-modal.modal
+                    .modal-content
+                        h4.center Add category
+                        form#category-form.container(action='#' method='POST')
+                            .row
+                                .input-field.col.s12
+                                    input#category(type='text')
+                                    label(for='category') Category name
+
+                            button.btn.waves-effect.waves-green.teal(type='submit') add category
+
+                //- #category-edit-modal.modal
+                    .modal-content
+                        h4.center Categories
+                        form#category-form.container(action='#' method='POST')
+                            .row
+                                .input-field.col.s12
+                                    input#category(type='text')
+                                    label(for='category') Cfdjbg,bfdk
+
+                            button.btn.waves-effect.waves-green.teal(type='submit') add category
+
+
+
+        include ./footer.pug
+        script(src="/js/edit-products.js")
+

@@ -1,0 +1,15 @@
+#intro-head {
+    font-size: 15em;
+    border: 0.05em solid white;
+    font-weight: 500;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+
+
+.darken {
+    filter: brightness(0.70);
+}

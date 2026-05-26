@@ -1,0 +1,8 @@
+node_modules
+.directory
+.DS_Store
+.env
+tmp
+logs/
+# multer-generated test uploads (filename = <ms-timestamp>-<random>-<name>.<ext>)
+www/catalog/project/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*-*

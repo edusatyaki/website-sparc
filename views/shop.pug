@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        main
+            .parallax-container(style='height:80vh')
+                .parallax
+                    img.active(src='/images/coffee.jpg', alt='control room', style='filter: brightness(50%)')
+                h1.center.white-text(style='font-size:10em; font-weight:bold;margin-top:30vh;') Room of Art
+
+            .container.shop
+                .row
+                    each product in products
+                        .col.s12.m6.l4.shop-item
+
+                            .card.z-depth-2.hoverable
+                                .card-image
+                                    //- img(src=product.images, alt='product image')
+                                    img.materialboxed(src='/product/image/'+product.id, alt='product image')
+                                    span.card-title #{product.name}
+
+                                .card-content
+                                    p #{product.description}
+
+                                .card-action
+                                    a.btn-flat.teal.lighten-2.white-text(href='javascript:enquire("'+product.id+'");') Rs #{product.cost}
+
+
+                    else
+                        p.col.s12.center There are no products.
+
+        include ./footer.pug
+        script(src='/js/imagesloaded.pkgd.min.js')
+        script(src='/js/masonry.pkgd.min.js')
+        script(type='text/javascript', src='/js/shop.js')
+
+        script(src="/js/particle.js")
+        script(src="/js/particleinit.js")

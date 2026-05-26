@@ -1,0 +1,93 @@
+doctype html
+html
+    head
+        title About the team
+        include ./head.pug
+        link(rel='stylesheet', href='/css/about.css')
+    body.is-preload
+        include ./menu.pug
+        section.wrapper
+            .inner
+                header.special
+                    br
+                    br
+                    br
+                    h2 About the Team
+                    p(style='font-size:20px;')
+                        | Great things in business are never done by one person. They're done by a team of people.
+                        br
+                        | - Steve Jobs
+
+
+
+
+
+
+        .container
+            .row
+                .col.s12.l6
+                    .card.grey.lighten-3
+                        .card-content
+                            
+                            blockquote
+                                p Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non faucibus.
+                        .card-action
+                            .row.no-margin
+                                .col.s3
+                                    img.circle.responsive-img(src='images/pic03.jpg', alt='' style='font-size:10px')
+                                .col.s9
+                                    p.credit(style='font-size:14px')
+                                        strong.red-text Sagar Chaudhari
+                                        span
+                                            br
+                                            | B.Arch, M.Arch (U.D)
+                                            br
+                                            | Head, Sparc Associates
+
+
+
+
+                .col.s12.l6
+                    .card.grey.lighten-3
+                        .card-content
+                            
+                            blockquote
+                                p Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non faucibus.
+                        .card-action
+                            .row.no-margin
+                                .col.s3
+                                    img.circle.responsive-img(src='images/pic03.jpg', alt='' style='font-size:10px')
+                                .col.s9
+                                    p.credit(style='font-size:14px')
+                                        strong.red-text Sagar Chaudhari
+                                        span
+                                            br
+                                            | B.Arch, M.Arch (U.D)
+                                            br
+                                            | Head, Sparc Associates
+
+                
+
+            .row
+                each person in people
+                    .col.s12.l4
+                        .card.grey.lighten-3
+                            .card-content
+                                
+                                blockquote
+                                    p #{ person.comments }
+                            .card-action
+                                .row.no-margin
+                                    //- .col.s3
+                                        img.circle.responsive-img(src='images/pic03.jpg', alt='' style='font-size:10px')
+                                    .col.s9
+                                        p.credit(style='font-size:14px')
+                                            strong.red-text #{ person.name }
+                                            span
+                                                br
+                                                | #{ person.education }
+                                                br
+                                                | #{ person.position }
+
+               
+        include ./footer.pug

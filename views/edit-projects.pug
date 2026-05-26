@@ -1,0 +1,126 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        main
+            .container#projectList
+
+                h3.center Projects
+                .row
+                    .col.s12.m9
+                        .collection
+                            //- each project in projects
+                            //-     a.collection-item.avatar(href='javascript:populate("'+project.id+'")')
+                            //-         img.circle(src='/project/image/'+project.id, alt=project.name)
+                            //-         //- img.circle.materialboxed(src='/images/xxx.jpg', alt=project.name)
+                            //-         span.title.strong.grey-text.text-darken-2 #{project.name}
+                            //-         p.black-text #{project.description}
+                            //-         //- p.blue-text.text-lighten-1 Rs #{project.cost}
+
+
+
+                            //- else
+                                p.center There are no projects.
+
+
+
+                          
+                            a.collection-item.avatar(v-for="project in projects" @click='javascript:populate(project._id)')
+                                img.circle(:src="project.images[0]", :alt="project.name")
+                                
+                                span.title.strong.grey-text.text-darken-2 {{project.name}}
+                                p.black-text.truncate {{project.description}}
+                                
+
+
+
+
+
+                    .col.s3
+                        .collection
+                            a.waves-effect.waves-light.collection-item.modal-trigger(data-target='edit-modal', onclick='clearproject()') Add project
+                                i.material-icons.left add
+
+
+                        include ./adminmenu.pug
+
+
+                #edit-modal.modal.modal-fixed-footer
+                    .modal-content
+                        h4#modal-heading.center Edit
+                        form#project-form(v-on:submit.prevent="onSubmit")
+                            .row
+                                .input-field.col.s6
+                                    input#project-name(type='text', v-model="selectedProject.name", name='project_name')
+                                    label(for='project-name') Project Name
+
+                                .input-field.col.s6
+                                    input#project-owner(type='text', v-model="selectedProject.owner", name='project_owner')
+                                    label(for='project-owner') Owner
+
+                                .input-field.col.s6
+                                    input#project-cost(type='text', v-model="selectedProject.cost", name='project_cost')
+                                    label(for='project-cost') Cost
+
+                                .input-field.col.s6
+                                    input#project-date(type='text', v-model="selectedProject.date", name='project_date')
+                                    label(for='project-cost') Date
+
+                                .input-field.col.s12
+                                    input#project-description(type='text', v-model="selectedProject.description", name='project_description')
+                                    label(for='project-description') Description
+
+                                //- .input-field.col.s12
+                                    input#project-categories(type='text', name='project_categories')
+                                    label(for='project-categories') Category
+
+                                .input-field.col.s6
+                                    //- i.material-icons.prefix link
+                                    input#project-url(type='text', name='project_url', v-model="selectedProject.projectUrl",)
+                                    label(for='project-url') Project Link
+
+                                .input-field.col.s6
+                                    //- i.material-icons.prefix link
+                                    input#project-video-url(type='text', name='project_video_url',v-model="selectedProject.youtubeUrl",)
+                                    label(for='project-video-url') Youtube Video Link
+
+                                .file-field.input-field.col.s12
+                                    .btn
+                                        span Upload Images
+                                        input#project-image(type='file', name='project_image', onchange="onFileUpload()")
+                                    //- .file-path-wrapper
+                                        input.file-path.validate(type='text')
+                                
+                                .col.s12
+                                    ul.collection
+                                        li.collection-item(v-for="fileurl in selectedProject.images") {{fileurl}}
+                                            i.material-icons.right.red-text(@click="deleteImage(fileurl)") delete
+                            
+                            .row
+                                .col.s12
+                                    button.btn.waves-effect.waves-green.teal(type="submit") Save
+                                        i.material-icons.left save
+                                    a.btn-flat.waves-effect.waves-red.red-text#delete-btn delete
+
+
+                //- #category-modal.modal
+                    .modal-content
+                        h4.center Add category
+                        form#category-form.container(action='#' method='POST')
+                            .row
+                                .input-field.col.s12
+                                    input#category(type='text')
+                                    label(for='category') Category name
+
+                            button.btn.waves-effect.waves-green.teal(type='submit') add category
+
+
+
+        include ./footer.pug
+        script(src="/js/vue.js")
+        script(src="/js/edit-projects.js")
+
