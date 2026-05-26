@@ -73,8 +73,10 @@ Copy `.env.example` → `.env` to customise port, Mongo URI, and mailer settings
 3. **Image uploads** — AWS S3 replaced with a local filesystem flow; images served from `www/catalog/`.
 4. **Graceful degraded mode** — all DB-backed routes render with empty data instead of hanging when MongoDB is unavailable.
 
-## Address
-
-SpArc Associates  
-31, Friends Cooperative Housing Society, Layout-2  
-Deendayal Nagar, Nagpur, Maharashtra 440022
+![Architechture](docs/screenshots/Architechture.png)
+The architecture flows top-to-bottom across five layers:
+Client — The browser loads Pug-rendered HTML and pulls static assets (CSS, JS, images, fonts) alongside client-side scripts like Particles.js, the counter, and Tilt.js.
+Vercel Edge — Incoming requests hit either the CDN (for static files in www/**) or the Serverless Function running index.js via @vercel/node. Every git push to GitHub triggers an automatic redeploy.
+Express Server — index.js bootstraps the app (Mongo connection, middleware), routes.js maps all URL patterns, middleware handles CORS/body-parsing/favicon/static serving, and Pug templates render the HTML responses.
+Controllers — Four controller files handle business logic: Projects (with image upload via Multer), Persons (About page), Products (Shop), and Enquiries (contact form → Nodemailer stub).
+Data Layer — Mongoose models talk to MongoDB (Atlas in production, in-memory server in dev). File uploads land in www/catalog/. The Nodemailer stub replaced the original SendGrid integration and logs emails to the console.
