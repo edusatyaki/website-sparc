@@ -109,12 +109,12 @@ app.use(favicon(path.join(__dirname, 'www', 'favicon.ico')))
 
 app.use(express.static(path.join(__dirname, 'www')))
 
-// Ensure the local upload directories exist (used by the local-FS replacement
-// for the old S3 / Buffer flows).  These are also served as static files.
+// Ensure the local upload directories exist.
+// On Vercel the function bundle is read-only, so wrap in try/catch.
 var projectUploadDir = path.join(__dirname, 'www', 'catalog', 'project')
 var productUploadDir = path.join(__dirname, 'www', 'catalog', 'product')
-fs.mkdirSync(projectUploadDir, { recursive: true })
-fs.mkdirSync(productUploadDir, { recursive: true })
+try { fs.mkdirSync(projectUploadDir, { recursive: true }) } catch (e) { /* read-only fs on serverless */ }
+try { fs.mkdirSync(productUploadDir, { recursive: true }) } catch (e) { /* read-only fs on serverless */ }
 
 // -----
 
