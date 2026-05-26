@@ -73,7 +73,7 @@ Copy `.env.example` → `.env` to customise port, Mongo URI, and mailer settings
 3. **Image uploads** — AWS S3 replaced with a local filesystem flow; images served from `www/catalog/`.
 4. **Graceful degraded mode** — all DB-backed routes render with empty data instead of hanging when MongoDB is unavailable.
 
-![Architechture](docs/screenshots/Architechture.png)
+![Architechture](docs/screenshots/sparc_architecture.svg)
 The architecture flows top-to-bottom across five layers:
 Client — The browser loads Pug-rendered HTML and pulls static assets (CSS, JS, images, fonts) alongside client-side scripts like Particles.js, the counter, and Tilt.js.
 Vercel Edge — Incoming requests hit either the CDN (for static files in www/**) or the Serverless Function running index.js via @vercel/node. Every git push to GitHub triggers an automatic redeploy.
